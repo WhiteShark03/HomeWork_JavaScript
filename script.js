@@ -189,21 +189,25 @@
 
 // //130.2  Не решено Напишите код, который будет проверять число на то, простое оно или нет. Простое число делится только на единицу и на само себя, и не делится на другие числа.
 
-// let arr = [1, 23, 462, 24, 231, 777];
-// let flag = false;
 
-// for (let i = 1; i < arr.length; i++) {
-// 	for (let j = 1; j < i; j++) {
-// 		if (arr[i] / 1 || arr[i] / arr[j]) {
-// 			flag = true;
-// 		}
-// 	}
-// }
-// if (flag == true) {
-// 	console.log('Простое число');
-// } else {
-// 	console.log('Непростое число');
-// }
+let num = 2;
+let flag = false;
+
+for (let i = 2; i < num; i++) {
+	flag = false;
+	for (let j = 3; j < num; j++) {
+		if (i % j === 0) {
+			flag = true;
+			break;
+		}
+	}
+}
+if (flag == true) {
+	console.log('Простое');
+} else {
+	console.log('Не простое');
+}
+
 
 //131.1 Подсчет количества элементов в массиве
 // let arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3, 3];
